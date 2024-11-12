@@ -20,10 +20,25 @@
                 <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             </div>
             <!-- Aqui está o link no lugar do botão -->
-            <a href="home.html" class="btn">Entrar</a>
+           <!-- <a href="home.html" class="btn" id="botao" >Entrar</a>-->
             <p class="signup">Ainda não tem uma conta? <a href="#">Cadastrar</a></p>
         </form>
     </div>
 
 </body>
+<script>
+    const username = getElementById("username")
+    const password = getElementById("password")
+    const button = getElementById("botao")
+
+    username.addEventListener("input", validacao);
+    password.addEventListener("input", validacao);
+
+    function validacao(){
+        if(username.value === "" || password.value === ""){
+            document.getElementById("botao").disabled
+        }
+    }
+
+</script>
 </html>
